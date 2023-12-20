@@ -1,0 +1,47 @@
+﻿@model List<Aspirante>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ImprimirReporte</title>
+</head>
+<body>
+    <div class="card-body">
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>FechaNacimiento</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>EstadoPrueba</th>
+                    <th>Calificacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdAspirante</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Apellido</td>
+                        <td>@item.Fecha_Nacimiento</td>
+                        <td>@item.Email</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.Estado_Prueba</td>
+                        <td>@item.Calificacion</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
